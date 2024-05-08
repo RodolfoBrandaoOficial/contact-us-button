@@ -1,116 +1,24 @@
-<div id="wp" class="col-1"
-    style="position: fixed;overflow: visible;display: grid;box-shadow: 0px 0px;width: 70px;height: 20%;margin-right: 5%;margin-bottom: 120px;background: rgba(22,8,191,0);">
-    <a style="color: rgba(255,255,255,0.69);"
-        href="javascript:window[&quot;$c\x68\x61\x74\x77\x6f\x6f\x74&quot;].toggle(&#39;open,close&#39;);" img
-        src="yourbutton.png" alt="Chat Button"><img
-            src="https://raw.githubusercontent.com/RodolfoBrandaoOficial/contact-us-button/main/chat-botao.png"
-            style="width: 70px;height: 70px;border-width: 1px;border-radius: 1px;" /></a><a
-        href="https://bio.quanticobit.com/#####URLZAP" style="color: rgba(255,255,255,0.69);" target="_blank"><img
-            src="https://raw.githubusercontent.com/RodolfoBrandaoOficial/contact-us-button/main/zap-botao.png"
-            style="width: 70px;height: 70px;border-width: 1px;border-radius: 1px;" /></a>
-    <div></div>
-</div>
-
 <script>
-    window["\x63\x68\x61\x74\x77\x6f\x6f\x74\x53\x65\x74\x74\x69\x6e\x67\x73"] = {
-        "position": "right",
-        "darkMode": "false",
-        "popoutChatWindow": "true",
-        "toggleBubbleVisibility": "hide",
-        "type": "expanded_bubble",
-        "setLocale": "pt_BR",
-        "launcherTitle": "FALE CONOSCO\npelo Chat Online 💬"
-    };
-    (function (d, t) {
-        var BASE_URL = "https://central.quanticobit.com",
-            g = d.createElement(t),
-            s = d.getElementsByTagName(t)[0];
-        g.src = BASE_URL + "/packs/js/sdk.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g, s);
-        g.onload = function () {
-            window["\x63\x68\x61\x74\x77\x6f\x6f\x74\x53\x44\x4b"].run({
-                websiteToken: 'TOKENCLIENTE',
-                baseUrl: BASE_URL
-            })
-        }
-    })(document, "script");
+    document.addEventListener('DOMContentLoaded', () => {
+        const d = document, BASE_URL = 'https://central.quanticobit.com';
+        const create = (e, p) => Object.assign(d.createElement(e), p);
+
+        const divContainer = create('div', { id: 'wp', className: 'col-1', style: 'position:fixed;overflow:visible;display:grid;box-shadow:0 0;width:70px;height:20%;margin-right:5%;margin-bottom:120px;background:rgba(22,8,191,0);' });
+
+        const anchorChat = create('a', { href: 'javascript:window["$c\x68\x61\x74\x77\x6f\x6f\x74"].toggle(\'open,close\');', style: 'color:rgba(255,255,255,0.69);' });
+        anchorChat.appendChild(create('img', { src: 'https://raw.githubusercontent.com/RodolfoBrandaoOficial/contact-us-button/main/chat-botao.png', alt: 'Chat Button', style: 'width:70px;height:70px;border-width:1px;border-radius:1px;' }));
+
+        const anchorWhatsApp = create('a', { href: 'https://bio.quanticobit.com/nomedozapapi', style: 'color:rgba(255,255,255,0.69);', target: '_blank' });
+        anchorWhatsApp.appendChild(create('img', { src: 'https://raw.githubusercontent.com/RodolfoBrandaoOficial/contact-us-button/main/zap-botao.png', style: 'width:70px;height:70px;border-width:1px;border-radius:1px;' }));
+
+        divContainer.append(anchorChat, anchorWhatsApp, d.createElement('div'));
+        d.body.appendChild(divContainer);
+
+        window["\x63\x68\x61\x74\x77\x6f\x6f\x74\x53\x65\x74\x74\x69\x6e\x67\x73"] = { "position": "right", "darkMode": "false", "popoutChatWindow": "true", "toggleBubbleVisibility": "hide", "type": "expanded_bubble", "setLocale": "pt_BR", "launcherTitle": "FALE CONOSCO\npelo Chat Online 💬" };
+
+        const g = create('script', { src: `${BASE_URL}/packs/js/sdk.js`, defer: true, async: true });
+        g.onload = () => window["\x63\x68\x61\x74\x77\x6f\x6f\x74\x53\x44\x4b"].run({ websiteToken: 'CHAVEAPIQUANTICOBIT', baseUrl: BASE_URL });
+        d.head.appendChild(create('style', { textContent: `*,*:after,*:before{margin:0;padding:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;-webkit-user-select:none;-ms-user-select:none;-o-user-select:none;-moz-user-select:none;user-select:none;cursor:default;}*{margin:0;padding:0;}a{border:none;}*{outline:none;}*:before,*:after{box-sizing:inherit;}#wp{position:fixed;z-index:100;height:60px;width:60px;right:40px;bottom:40px;border-radius:50px;background-color:rgb(38,231,7);font-size:30px;text-align:center;box-shadow:2px 2px 3px #000000;color:#FFF;}#wp:hover{text-decoration:none;}*{margin:0;padding:0;box-sizing:border-box;}body a{color:inherit;text-decoration:none;}button.woot-widget-bubble.woot-elements--right.woot-widget--expanded{display:none;}` }));
+        d.head.appendChild(g);
+    });
 </script>
-
-<style>
-    *,
-    *:after,
-    *:before {
-        margin: 0;
-        padding: 0;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        -o-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-        cursor: default;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    a {
-        border: none;
-    }
-
-    * {
-        outline: none;
-    }
-
-    * {
-        /*box-sizing: inherit;*/
-    }
-
-    *:before,
-    *:after {
-        box-sizing: inherit;
-    }
-
-    #wp {
-        position: fixed;
-        z-index: 100;
-        height: 60px;
-        width: 60px;
-        right: 40px;
-        bottom: 40px;
-        border-radius: 50px;
-        background-color: rgb(38, 231, 7);
-        font-size: 30px;
-        text-align: center;
-        box-shadow: 2px 2px 3px #000000;
-        color: #FFF;
-    }
-
-    #wp:hover {
-        /*color: rgb(72,90,255);*/
-        text-decoration: none;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    button.woot-widget-bubble.woot-elements--right.woot-widget--expanded {
-        display: none;
-    }
-</style>
