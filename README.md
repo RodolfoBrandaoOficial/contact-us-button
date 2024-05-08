@@ -1,6 +1,6 @@
 # Contact Us Button for Website
 
-![Contact Us Button](https://raw.githubusercontent.com/RodolfoBrandaoOficial/contact-us-button/main/zap-botao.png)
+![Contact Us Button](https://raw.githubusercontent.com/RodolfoBrandaoOficial/contact-us-button/main/contact-us-button.png)
 
 This repository contains the source code for a "Contact Us" button that can be added to a website. The button allows visitors to easily contact you via various messaging platforms, such as WhatsApp, Telegram, or email.
 
